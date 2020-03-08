@@ -71,7 +71,7 @@
 	
 	\section{Data Processing and Conclusion Analysing}
 	
-	\subsection{sales-based analysis}
+	\subsection{Sales-Based Analysis}
 	We screened sales data for three types of products, and selected the three products with the highest sales volume to draw sales-time line charts. The results are as follows.
 	
 	\begin{figure}[H]
@@ -109,13 +109,13 @@
 	
 	However, sales-based analysis is not enough. Below we will analyze the data from some other angles.
 	
-	\subsection{Count the word frequency statistics}
+	\subsection{Count the Word Frequency Statistics}
 	To analyze the review of consumers, we divided the review into high score (3-4 points) and a low score (1-2 points). First of all, we synthesize the reviews of the three products and find out the word frequency. Then we deal with the high-grade reviews and low-grade reviews of the three products respectively. The python code is attached. For the python code, see the appendix.
-	\subsubsection{Remove stopwords}
+	\subsubsection{Remove Stopwords}
 	Because some commonly used words are used quite frequently, such as a the, he, etc. in English, almost all comments contain these words. If they are used as keywords, almost all comments will be indexed, and there is no differentiation, so these words are generally removed directly, not as keywords.
 	
 	
-	\subsection{Advantages and disadvantages of three products}
+	\subsection{Advantages and Disadvantages of Three Products}
 	After the word frequency is counted and the stop words are removed, the reason why people like/dislike the product is obtained by analyzing the words with high word frequency.
 	By counting the number of times that people mentioned the reason, we summed up 5 factors of success or failure of these products.
 	\subsubsection{Pacifier}
@@ -142,7 +142,7 @@
 	\end{flushleft}
 	
 	
-	\subsubsection{hair dryer}
+	\subsubsection{Hair Dryer}
 	\begin{figure}[H]
 		\begin{minipage}[t]{0.5\textwidth}
 			\centering
@@ -163,7 +163,7 @@
 		From the figure, we can know that about 21\% of people can't stand the extreme hot of the hair dryer.17\% complained that the cord broke quickly.10\% find that the setting mode has some problem.7\% think buying the hairdryer is a waste of money, and the same percentage of people wrote that the hairdryer broke quickly.
 	\end{flushleft}
 	
-	\subsubsection{microwave}
+	\subsubsection{Microwave}
 	\begin{figure}[H]
 		\begin{minipage}[t]{0.5\textwidth}
 			\centering
@@ -186,7 +186,7 @@
 	\end{flushleft}
 	
 	
-	\subsection{Relations between specific quality descriptors and rating levels}
+	\subsection{Relations between Specific Quality Descriptors and Rating Levels}
 	We choose 8 specific quality descriptors. And their frequency is shown in the table.
 	\begin{table}[H]
 		\centering
@@ -269,7 +269,7 @@
 	
 	As can be seen from the above chart, the correlation coefficient with a star of 5 is the largest. This means that a 5-star rating will lead to more reviews.
 	
-	\subsection{Use DNN to calculate the value of the reviews}
+	\subsection{Using DNN to Calculate the Value of the Reviews}
 	The emotion analysis system is one of the most classical applications in natural language processing. We use the algorithm developed by Han Xiao and Yao Lu\cite{1} to map the degree of whether a customer likes or dislikes the product to the range of [0,1], to quantitatively reflect the attitude expressed by the comment.
 	\subsubsection{Preprocessing}
 	
@@ -281,7 +281,7 @@
 		\item Non-text data: HTML tags, URL addresses, and other non-text content are often attached to the text, so it is necessary to clear this part of the content that is not helpful for classification.
 		\item Meaningless text: Besides, the rest of the text, such as advertising content, copyright information, and personal signature, should also be filtered out, which should not be learned as features.
 	\end{itemize}
-	\subsubsection{algorithm}
+	\subsubsection{Algorithm}
 	In the algorithm,Dynamic Convolution Neural Network is used as the sentiment prediction algorithm.The network layers are set as follows:
 	\begin{itemize}
 		\item Embedding layer: set as the lowest layer, to get the vector representation for individual words to form the matrix representation of the sentence
@@ -309,6 +309,7 @@
 	
 	\begin{table}[h]
 		\begin{center} 
+			\caption{correlation coefficient between review-based ratings and star ratings}
 			\begin{tabular}{|c|c|c|}
 				\hline
 				&                  & correlation coefficient \\ \hline
@@ -329,7 +330,7 @@
 	As can be seen from the table, review-based ratings are positively related to star rating satisfaction. In the case where the review-based score is relatively low, especially when the star rating is in the middle level, the correlation coefficient is relatively high. Overall our review-based ratings are acceptable.
 	
 	
-	\subsection{User evaluation}
+	\subsection{User Evaluation}
 	\subsubsection{Theory}
 	To get a user evaluation of the top three hair dryers, microwaves, and pacifiers, we came up with the following measurement method. To make full use of reviews and ratings, we combined text-based ratings and star-based ratings, each giving different weights, and finally got a most informative measure. The formula is as follows:
 	$$
