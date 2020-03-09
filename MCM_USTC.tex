@@ -66,7 +66,6 @@
 	\tableofcontents
 	\newpage
 	
-	\section{Overview}
 	
 	
 	\section{Introduction}
@@ -91,7 +90,7 @@
 	
 	To meet the above requirements, we have done a variety of processing on the data. The main contents include the sales-time chart, word frequency statistics on features and quality descriptors, the relationship between specific star ratings and the number of reviews, and the combination of  text-based measures and ratings-based measures.
 	
-	\section{Data Processing and Conclusion Analysing}
+	\section{Analysis and Results}
 	
 	\subsection{Sales-Based Analysis}
 	We screened sales data for three types of products, and selected the three products with the highest sales volume to draw sales-time line charts. The results are as follows.
@@ -107,52 +106,52 @@
 		\small
 		\centering
 		\includegraphics[width=12cm]{microwave2.eps}
-		\caption{microwave sales} \label{microwave sales}
+		\caption{microwave  oven sales} \label{microwave sales}
 	\end{figure}
 	
 	\begin{figure}[H]
 		\small
 		\centering
 		\includegraphics[width=12cm]{pacifier2.eps}
-		\caption{pacifier sales} \label{pacifier sales}
+		\caption{baby pacifier sales} \label{pacifier sales}
 	\end{figure}
 	
 	By simply analyzing these images, we have reached some conclusions:
 	\begin{itemize}
 		\item
-		The total sales of the three products are significantly different. The sales of hair dryers and pacifiers are much larger than microwave ovens, and the market competition is more intense.
+		The total sales of the three products are significantly different. The sales of hair dryers and baby pacifiers are much larger than microwave ovens, and the market competition is more intense.
 		\item
 		For hair dryers, some products have been sold early, but their sales have grown slowly. Other products have only begun to appear in recent years, but sales have grown rapidly, quickly surpassing older products. The total sales volume of hair dryers has increased rapidly in recent years and has great market potential.
 		\item
 		The overall sales of the microwave oven market are low with relatively large fluctuations. Some products maintain low monthly sales and still have a downward trend. Some new products have good sales as soon as they hit the market. This may be because buyers of microwave ovens value new features of the products more.
 		\item
-		The sales of pacifiers are also generally increasing, but most of the best-selling products have a long sales history. This may be because for products such as pacifiers, people prefer products that are safe and reliable, and are more willing to choose a brand that sells well and is well received.
+		The sales of baby pacifiers are also generally increasing, but most of the best-selling products have a long sales history. This may be because for products such as baby pacifiers, people prefer products that are safe and reliable, and are more willing to choose a brand that sells well and is well received.
 	\end{itemize}
 	
 	However, sales-based analysis is not enough. Below we will analyze the data from some other angles.
 	
-	\subsection{Count the Word Frequency Statistics}
+	\subsection{Word Frequency Statistics}
 	To analyze the review of consumers, we divided the review into high score (3-4 points) and a low score (1-2 points). First of all, we synthesize the reviews of the three products and find out the word frequency. Then we deal with the high-grade reviews and low-grade reviews of the three products respectively. The python code is attached. For the python code, see the appendix.
 	\subsubsection{Remove Stopwords}
 	Because some commonly used words are used quite frequently, such as a the, he, etc. in English, almost all comments contain these words. If they are used as keywords, almost all comments will be indexed, and there is no differentiation, so these words are generally removed directly, not as keywords.
 	
 	
-	\subsection{Advantages and Disadvantages of Three Products}
+	\subsection{Pros and Cons of Three Products}
 	
 	After the word frequency is counted and the stop words are removed, the reason why people like/dislike the product is obtained by analyzing the words with high word frequency.
 	By counting the number of times that people mentioned the reason, we summed up 5 factors of success or failure of these products.
-	\subsubsection{Pacifier}
+	\subsubsection{Baby Pacifier}
 	\begin{figure}[H]
 		\begin{minipage}[t]{0.5\textwidth}
 			\centering
 			\includegraphics[scale=0.5]{pacifier_advantage.eps}
-			\caption{The proportion of reasons people like the pacifier\label{fig:1}}
+			\caption{The proportion of reasons people like the baby pacifier\label{fig:1}}
 		\end{minipage}
 		\qquad
 		\begin{minipage}[t]{0.5\textwidth}
 			\centering
 			\includegraphics[scale=0.5]{pacifier_disadvantage.eps}
-			\caption{The proportion of reasons people dislike the pacifier\label{fig:2}}
+			\caption{The proportion of reasons people dislike the baby pacifier\label{fig:2}}
 		\end{minipage}
 	\end{figure}
 	
@@ -160,7 +159,7 @@
 	
 	
 	On the other hand, about 9.5\% of people who don't like the product complain
-	about the poor quality. Although 4\% of people who like the product think that the nipple fits well with there baby's mouth, 7\%  think that the nipple leaks, or is too short and hard. Besides, people can't bear the plastic smell, which is an important reason why they don't like it. Furthermore, some parents think that the pacifier doesn't fit well. At last, about 3\% of people find it hard to clean the pacifier, which makes them give low ratings.
+	about the poor quality. Although 4\% of people who like the product think that the nipple fits well with there baby's mouth, 7\%  think that the nipple leaks, or is too short and hard. Besides, people can't bear the plastic smell, which is an important reason why they don't like it. Furthermore, some parents think that the baby pacifier doesn't fit well. At last, about 3\% of people find it hard to clean the pacifier, which makes them give low ratings.
 	
 	
 	\subsubsection{Hair Dryer}
@@ -182,29 +181,29 @@
 	
 	From the figure, we can know that about 21\% of people can't stand the extreme hot of the hair dryer.17\% complained that the cord broke quickly.10\% find that the setting mode has some problem.7\% think buying the hairdryer is a waste of money, and the same percentage of people wrote that the hairdryer broke quickly.
 	
-	\subsubsection{Microwave}
+	\subsubsection{Microwave Oven}
 	\begin{figure}[H]
 		\begin{minipage}[t]{0.5\textwidth}
 			\centering
 			\includegraphics[scale=0.5]{microwave_advantage.eps}
-			\caption{The proportion of reasons people like the microwave\label{fig:1}}
+			\caption{The proportion of reasons people like the microwave oven\label{fig:1}}
 		\end{minipage}
 		\qquad
 		\begin{minipage}[t]{0.5\textwidth}
 			\centering
 			\includegraphics[scale=0.5]{microwave_disadvantage.eps}
-			\caption{The proportion of reasons people dislike the microwave\label{fig:2}}
+			\caption{The proportion of reasons people dislike the microwave oven\label{fig:2}}
 		\end{minipage}
 	\end{figure}
 	
 	About 35\% of customers love its size. They said they can put it anywhere in the kitchen and it fits well.21\% thinks it's easy to use.15\% people think that the price is fair.
-	6\% enjoy its paint. And some other people find the microwave easy to clean.
+	6\% enjoy its paint. And some other people find the microwave oven easy to clean.
 	
-	However, problems still exist. Customers complain that the customer service is horrible. Besides, the door of the microwave has many problems. Furthermore,20\% think warranty time is too short. About 9\% of people said that their microwave stop working or the button broke;
+	However, problems still exist. Customers complain that the customer service is horrible. Besides, the door of the microwave oven has many problems. Furthermore,20\% think warranty time is too short. About 9\% of people said that their microwave ovens stop working or the button broke;
 	
 	
 	
-	\subsection{Relations between Specific Quality Descriptors and Rating Levels}
+	\subsection{The Relationship between Quality Descriptors and Ratings}
 	We choose 8 specific quality descriptors. And their frequency is shown in the table.
 	\begin{table}[H]
 		\centering
@@ -251,7 +250,7 @@
 	\subsection{Do specific star ratings incite more reviews? }
 	\subsubsection{Theory}
 	
-	To analyze whether some specific star ratings lead to more reviews, we have analyzed the highest selling products for hair dryers, microwave ovens, and pacifiers. First, we counted the number of reviews per month for a certain product and the number of reviews per month for five ratings of the product and then used the correlation coefficient formula to calculate the correlation coefficient between the total number of reviews and a certain number of star ratings. The correlation coefficients corresponding to the scores are compared. When a certain correlation coefficient is large, the more the certain star ratings in a certain period, the more the user's comments will be. That is to say, the number of certain star ratings and the total number of star ratings are in a linear relationship. That way, we have every reason to believe that this rating will incite more reviews.
+	To analyze whether some specific star ratings lead to more reviews, we have analyzed the highest selling products for hair dryers, microwave ovens, and baby pacifiers. First, we counted the number of reviews per month for a certain product and the number of reviews per month for five ratings of the product and then used the correlation coefficient formula to calculate the correlation coefficient between the total number of reviews and a certain number of star ratings. The correlation coefficients corresponding to the scores are compared. When a certain correlation coefficient is large, the more the certain star ratings in a certain period, the more the user's comments will be. That is to say, the number of certain star ratings and the total number of star ratings are in a linear relationship. That way, we have every reason to believe that this rating will incite more reviews.
 	
 	\subsubsection{Data Processing}
 	
@@ -297,7 +296,7 @@
 	
 	As can be seen from the above chart, the correlation coefficient with a star of 5 is the largest. This means that a 5-star rating will lead to more reviews.
 	
-	\subsection{Using DNN to Calculate the Value of the Reviews}
+	\subsection{Calculating the Score of Reviews Using DNN}
 	The emotion analysis system is one of the most classical applications in natural language processing. We use the algorithm developed by Han Xiao and Yao Lu\cite{1} to map the degree of whether a customer likes or dislikes the product to the range of [0,1], to quantitatively reflect the attitude expressed by the comment.
 	\subsubsection{Preprocessing}
 	
@@ -352,7 +351,7 @@
 	
 	\subsection{User Evaluation}
 	\subsubsection{Theory}
-	To get a user evaluation of the top three hair dryers, microwaves, and pacifiers, we came up with the following measurement method. To make full use of reviews and ratings, we combined text-based ratings and star-based ratings, each giving different weights, and finally got a most informative measure. The formula is as follows:
+	To get a user evaluation of the top three hair dryers, microwave ovens, and baby pacifiers, we came up with the following measurement method. To make full use of reviews and ratings, we combined text-based ratings and star-based ratings, each giving different weights, and finally got a most informative measure. The formula is as follows:
 	$$
 	average\ rating = 0.8 \times star\_rating + text\_rating
 	$$
@@ -378,23 +377,23 @@
 		\small
 		\centering
 		\includegraphics[width=13cm]{microwave_ave_rating2.eps}
-		\caption{microwave average rating} \label{fig:micorwave average rating}
+		\caption{microwave oven average rating} \label{fig:micorwave average rating}
 	\end{figure}
 	
 	This picture is not different from the above picture, because the microwave oven has fewer reviews, the average rating fluctuates greatly. First of all, the product B0055UBB40 (red line) has been fluctuating between one star and three stars. Secondly, the product B0058CLNBU (blue line) has been fluctuating between one star and five stars, and the blue line has been almost above the red line. The final product B0052G14E8 (green line) fluctuated between one star and five stars in the early stage, and stabilized at about four stars in the later stage. It can be seen that the market feedback of product B0058CLNBU (blue line) and product B0052G14E8 (green line) is better than product B0055UBB40 (red line).
 	
-	Finally, the chart of the top three pacifiers is as follow:\ (product\_id:B003CK3LLDI, B0028IDXDS, B0045I6IA4):
+	Finally, the chart of the top three baby pacifiers is as follow:\ (product\_id:B003CK3LLDI, B0028IDXDS, B0045I6IA4):
 	\begin{figure}[H]
 		\small
 		\centering
 		\includegraphics[width=13cm]{pacifier_ave_rating2.eps}
-		\caption{pacifier average rating} \label{fig:pacifier average rating}
+		\caption{baby pacifier average rating} \label{fig:pacifier average rating}
 	\end{figure}
 	This picture is very similar to the picture about the hair dryer, both of which fluctuate in the early stage and stabilize in the later stage. In the later period, the three products were stable between four stars and 4.5 stars. In this regard, market feedback is better than hair dryers.
 	
-	
-	\subsubsection{Another Theory}
-	In the previous subsubsection, we gave a measurement scheme based on user star rating and review analysis only, which focuses more on user evaluation. But sometimes sales, helpful votes and whether a buyer is a vine can also affect the measurement of a product. Therefore, we designed another general evaluation formula:
+	\subsection{Comprehensive Evaluation}
+	\subsubsection{Theory}
+	In the previous subsection, we gave a measurement scheme based on user star rating and review analysis only, which focuses more on user evaluation. But sometimes sales, helpful votes and whether a buyer is a vine can also affect the measurement of a product. Therefore, we designed another general evaluation formula:
 	
 	$$review\_score=(text\_rating\times4-2)\times(10+helpful\_votes-(total\_votes-helpful\_votes))$$
 	
@@ -418,7 +417,7 @@
 		\small
 		\centering
 		\includegraphics[width=13cm]{microwave_total_score2.eps}
-		\caption{microwave total score} \label{fig:microwave total score}
+		\caption{microwave oven total score} \label{fig:microwave total score}
 	\end{figure}
 	
 	For microwave ovens, the difference is obvious. Product B0052G14E8 (black line) has always maintained a good score; product B0058CLNBU (blue line) has always had a low score; product B0055UBB4O (red line) has increased rapidly after a period of low scores. This may be because product B0055UBB4O (the red line) made up for the shortcomings in the sales process, resulting in a large increase in sales. It can be seen that if some fatal flaws are avoided, the company can easily occupy a good microwave oven market share.
@@ -427,7 +426,7 @@
 		\small
 		\centering
 		\includegraphics[width=13cm]{pacifier_total_score2.eps}
-		\caption{pacifier total score} \label{fig:pacifier total score}
+		\caption{baby pacifier total score} \label{fig:pacifier total score}
 	\end{figure}
 	
 	The market competition for baby pacifiers is also fierce, with three products taking the lead alternately. However, we have noticed that the total scores of these products have been declining recently. So if you want to join the market for baby pacifiers, it's important to seize this opportunity.
@@ -445,7 +444,7 @@
 	
 	The competition in the microwave oven market is not so fierce. Recently, two products (B0052G14E8 and B0055UBB40) accounted for a large proportion, and the product B0052G14E8 has only entered the market for two years. This shows that the microwave oven market has great potential. Sunshine can invest more. But the product B0052G14E8's average score and total score are both relatively high, which indicates that if Sunshine's newly launched products have unique competitiveness, it may occupy a large market in a short period. According to word frequency analysis, the following advantages should be valued: proper size, ease of use, cheap price, good paint, easy cleaning, and robustness.
 	
-	Finally, the top three products in the pacifier market all have a long history. This shows that users have high requirements for the quality of pacifiers, and they are very sticky. Of course, this is also well understood. Parents will not easily change brands for the sake of their children's health. If Sunshine wants to enter this market, then the quality requirements must be given special attention. According to word frequency analysis, a good product should have such advantages: easy to use, cute in appearance, high quality, reasonable price, comfortable to use, easy to clean, and tasteless.
+	Finally, the top three products in the baby pacifier market all have a long history. This shows that users have high requirements for the quality of baby pacifiers, and they are very sticky. Of course, this is also well understood. Parents will not easily change brands for the sake of their children's health. If Sunshine wants to enter this market, then the quality requirements must be given special attention. According to word frequency analysis, a good product should have such advantages: easy to use, cute in appearance, high quality, reasonable price, comfortable to use, easy to clean, and tasteless.
 	
 	Based on the calculation of the correlation coefficient, we find that 5-star reviews are more likely to incite more reviews. This also means that if a product has good feedback when it first enters the market, then other users are more likely to pay.
 	
@@ -459,17 +458,17 @@
 	I write to you on behalf of the MCM team 2010225.As soon as we know that you are going to launch and sell the products, we have analyzed the historical sales data of these three types of products. I hope it can help you to develop your sales strategy.
 	
 	First of all, we analyzed the sales volume of the three products. 
-	In general, hair dryers and pacifiers sell more than microwave ovens.The details of the three products are as follows:
+	In general, hair dryers and baby pacifiers sell more than microwave ovens.The details of the three products are as follows:
 	
 	For hair dryer, some new products have a rapid growth in sales in a short period of time, surpassing many old products with slow growth in sales. In addition, the total sales volume of hair dryer has increased rapidly in recent years. So if your product quality is excellent, you will have great development opportunities. 
 	
 	The sales volume of microwave ovens fluctuates greatly. Some products are not selling well all the time, but many new products sell well as soon as they come into the market. This may be because consumers of microwave ovens prefer the new features of the product.
 	
-	The overall increase in sales of pacifiers may be related to the increase in the number of newborns, which is good for you. But the best selling goods have a long sale time. This may be due to the fact that people prefer to choose safe and reliable old brands with large sales volume and high praise. So you should pay more attention to quality and make good reputation.
+	The overall increase in sales of baby pacifiers may be related to the increase in the number of newborns, which is good for you. But the best selling goods have a long sale time. This may be due to the fact that people prefer to choose safe and reliable old brands with large sales volume and high praise. So you should pay more attention to quality and make good reputation.
 	
 	Then we have statistical research on customer reviews. Through the research of some words that often appear in the reviews, we have summed up the five most praised and questioned features of the three types of products, hoping to help you to summarize the experience and lessons.
 	
-	For pacifier, safety and quality are the main concerns of customers. It's worth mentioning that many customers complain that many products in the past have a plastic smell. If you make an improvement, it will certainly help you win more customers. For hair dryer, people pay more attention to the comfort and price of use, and we can consider developing affordable and convenient products. For the microwave oven, people are very concerned about their size and after-sales service. Because the microwave oven is a long-term product, so you really need to pay attention to after-sales service. If you can, extending the warranty will also win you more customers.
+	For baby pacifier, safety and quality are the main concerns of customers. It's worth mentioning that many customers complain that many products in the past have a plastic smell. If you make an improvement, it will certainly help you win more customers. For hair dryer, people pay more attention to the comfort and price of use, and we can consider developing affordable and convenient products. For the microwave oven, people are very concerned about their size and after-sales service. Because the microwave oven is a long-term product, so you really need to pay attention to after-sales service. If you can, extending the warranty will also win you more customers.
 	\paragraph{}
 	Finally, we set a comprehensive value for you to evaluate your sales situation in the future, which integrates the customer's comments, scores, vote on the comments, whether the customer is vine and other factors. You can use it to make a comprehensive assessment of your sales situation and compare it with previous products to help you sell products better.
 	
