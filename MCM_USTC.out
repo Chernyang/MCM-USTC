@@ -1,0 +1,30 @@
+\BOOKMARK [1][-]{section.1}{Overview}{}% 1
+\BOOKMARK [1][-]{section.2}{Introduction}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Background}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Problem Restatement}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Solution Introduction}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{Data Processing and Conclusion Analysing}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{Sales-Based Analysis}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{Count the Word Frequency Statistics}{section.3}% 8
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Remove Stopwords}{subsection.3.2}% 9
+\BOOKMARK [2][-]{subsection.3.3}{Advantages and Disadvantages of Three Products}{section.3}% 10
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Pacifier}{subsection.3.3}% 11
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Hair Dryer}{subsection.3.3}% 12
+\BOOKMARK [3][-]{subsubsection.3.3.3}{Microwave}{subsection.3.3}% 13
+\BOOKMARK [2][-]{subsection.3.4}{Relations between Specific Quality Descriptors and Rating Levels}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.5}{Do specific star ratings incite more reviews? }{section.3}% 15
+\BOOKMARK [3][-]{subsubsection.3.5.1}{Theory}{subsection.3.5}% 16
+\BOOKMARK [3][-]{subsubsection.3.5.2}{Data Processing}{subsection.3.5}% 17
+\BOOKMARK [3][-]{subsubsection.3.5.3}{Conclusion}{subsection.3.5}% 18
+\BOOKMARK [2][-]{subsection.3.6}{Using DNN to Calculate the Value of the Reviews}{section.3}% 19
+\BOOKMARK [3][-]{subsubsection.3.6.1}{Preprocessing}{subsection.3.6}% 20
+\BOOKMARK [3][-]{subsubsection.3.6.2}{Algorithm}{subsection.3.6}% 21
+\BOOKMARK [2][-]{subsection.3.7}{Verifying the Accuracy of Review-Based Ratings}{section.3}% 22
+\BOOKMARK [2][-]{subsection.3.8}{User Evaluation}{section.3}% 23
+\BOOKMARK [3][-]{subsubsection.3.8.1}{Theory}{subsection.3.8}% 24
+\BOOKMARK [3][-]{subsubsection.3.8.2}{Data Processing}{subsection.3.8}% 25
+\BOOKMARK [3][-]{subsubsection.3.8.3}{Another Theory}{subsection.3.8}% 26
+\BOOKMARK [3][-]{subsubsection.3.8.4}{Data Processing}{subsection.3.8}% 27
+\BOOKMARK [1][-]{section.4}{Conclusion}{}% 28
+\BOOKMARK [1][-]{section.5}{Letter}{}% 29
+\BOOKMARK [1][-]{section*.21}{Appendices}{}% 30
