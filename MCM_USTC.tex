@@ -41,6 +41,7 @@
 \title{A Wealth of Data}
 \begin{document}
 	\begin{abstract}
+		
 		With the advent of the era of big data, data analysis has become a powerful means of market competition. In this paper, we aim to analyze the sales data of three types of products in the market and user reviews to provide recommendations for the sale of products.
 		
 		First of all, we analyze the difference in sales between products and the trend of change, which provides us with a direct view of the market situation.
@@ -57,7 +58,7 @@
 		
 		Finally, we combined data from product sales records and user reviews to identify a way to measure products.
 		\begin{keywords}
-			data analysis;natural language processing;statistics
+			data analysis;\ natural language processing;\ statistics
 		\end{keywords}
 	\end{abstract}
 	\maketitle
@@ -78,12 +79,17 @@
 	
 	\subsection{Problem Restatement}
 	
-	We are required to  identify key patterns, relationships, measures, and parameters in past customersupplied ratings and reviews associated with other competing products to 1) inform their online sales strategy and 2) identify potentially important design features that would enhance product
-	desirability. 
+	We are required to  identify key patterns, relationships, measures, and parameters in past customersupplied ratings and reviews associated with other competing products to:
+	\begin{itemize}
+		\item 
+		inform their online sales strategy
+		\item
+		identify potentially important design features that would enhance product
+	\end{itemize}
 	
 	\subsection{Solution Introduction}
 	
-	To meet the above requirements, we have done a variety of processing on the data. The main contents include the sales time chart, word frequency statistics on features and quality descriptors, the relationship between specific scores and the number of reviews, and the combination of  text-based measures and ratings-based measures.
+	To meet the above requirements, we have done a variety of processing on the data. The main contents include the sales-time chart, word frequency statistics on features and quality descriptors, the relationship between specific star ratings and the number of reviews, and the combination of  text-based measures and ratings-based measures.
 	
 	\section{Data Processing and Conclusion Analysing}
 	
@@ -132,6 +138,7 @@
 	
 	
 	\subsection{Advantages and Disadvantages of Three Products}
+	
 	After the word frequency is counted and the stop words are removed, the reason why people like/dislike the product is obtained by analyzing the words with high word frequency.
 	By counting the number of times that people mentioned the reason, we summed up 5 factors of success or failure of these products.
 	\subsubsection{Pacifier}
@@ -148,14 +155,12 @@
 			\caption{The proportion of reasons people dislike the pacifier\label{fig:2}}
 		\end{minipage}
 	\end{figure}
-	\begin{flushleft}
+		
 		As shown in the chart, ease of use is the most outstanding advantage of the product. About 17\% of high scoring customers mentioned this feature in their comments. After that is cute, quality, price and pacifier design.
 		
-	\end{flushleft}
-	\begin{flushleft}
+		
 		On the other hand, about 9.5\% of people who don't like the product complain
 		about the poor quality. Although 4\% of people who like the product think that the nipple fits well with there baby's mouth, 7\%  think that the nipple leaks, or is too short and hard. Besides, people can't bear the plastic smell, which is an important reason why they don't like it. Furthermore, some parents think that the pacifier doesn't fit well. At last, about 3\% of people find it hard to clean the pacifier, which makes them give low ratings.
-	\end{flushleft}
 	
 	
 	\subsubsection{Hair Dryer}
@@ -172,12 +177,10 @@
 			\caption{The proportion of reasons people dislike the hair dryer }
 		\end{minipage}
 	\end{figure}
-	\begin{flushleft}
+
 		According to the figure,16\% of people think it saves their time, while 14\% were attracted by the affordable price.12\% think the retractable cord is a good design. Besides, the hairdryer is light to carry, so 10\% of customers give a high rating. At last, the heating setting design is also attractive.
-	\end{flushleft}
-	\begin{flushleft}
+		
 		From the figure, we can know that about 21\% of people can't stand the extreme hot of the hair dryer.17\% complained that the cord broke quickly.10\% find that the setting mode has some problem.7\% think buying the hairdryer is a waste of money, and the same percentage of people wrote that the hairdryer broke quickly.
-	\end{flushleft}
 	
 	\subsubsection{Microwave}
 	\begin{figure}[H]
@@ -193,13 +196,12 @@
 			\caption{The proportion of reasons people dislike the microwave\label{fig:2}}
 		\end{minipage}
 	\end{figure}
-	\begin{flushleft}
+
 		About 35\% of customers love its size. They said they can put it anywhere in the kitchen and it fits well.21\% thinks it's easy to use.15\% people think that the price is fair.
 		6\% enjoy its paint. And some other people find the microwave easy to clean.
-	\end{flushleft}
-	\begin{flushleft}
+
 		However, problems still exist. Customers complain that the customer service is horrible. Besides, the door of the microwave has many problems. Furthermore,20\% think warranty time is too short. About 9\% of people said that their microwave stop working or the button broke;
-	\end{flushleft}
+
 	
 	
 	\subsection{Relations between Specific Quality Descriptors and Rating Levels}
@@ -224,7 +226,7 @@
 	p(word\_in\_high\_rating)=\frac{\frac{num\_in\_high}{high\_num}}
 	{\frac{num\_in\_high}{high\_num}+\frac{num\_in\_low}{low\_num}}
 	\end{align}
-	\begin{flushleft}
+
 		\begin{itemize}
 			\item  $word\_in\_high\_rating$:Probability of words appearing in high scoring comments 
 			\item	$num\_in\_high$ :The number of times words appear in high rated comments
@@ -232,7 +234,7 @@
 			\item $high\_num$ :Number of high rated comments
 			\item $low\_num$ :Number of low rated comments
 		\end{itemize}
-	\end{flushleft}
+
 	
 	\begin{figure}[H]
 		\begin{minipage}[t]{1\textwidth}
@@ -241,9 +243,9 @@
 			\caption{probability the word appear in high/low rating comments\label{fig:1}}
 		\end{minipage}
 	\end{figure}
-	\begin{flushleft}
+
 		As we can see, if the word 'love' or 'perfect' appears in the review, Users nearly have a 90\% chance to give high scores. On the contrary, if the word 'disappointed' is in the review, We can almost conclude that the user will give a low rating.
-	\end{flushleft}
+
 	So it is obvious that specific quality descriptors are strongly associated with rating levels.
 	
 	\subsection{Do specific star ratings incite more reviews? }
@@ -255,10 +257,12 @@
 	
 	In order to calculate the correlation coefficient, we need to first calculate the covariance of these two data.Covariance can be easily calculated by the following equation:
 	$$Cov(X,Y)=E[(X-E[X])(Y-E[Y])]$$
+	
 	Cov (X, Y) represents the covariance of X and Y, and E (X) represents the expectation of X.
 	
 	After getting the covariance, we used the following formula to calculate the correlation coefficient:
 	$$r(X,Y)=\frac{Cov(X,Y)}{\sqrt{Var[X]Var[Y]}}$$
+	
 	Here r (X, Y) represents the correlation coefficient between X and Y, and Var [X] represents the variance of X.
 	
 	Here is the table of the correlation coefficient for every star rating:
@@ -444,6 +448,8 @@
 	Finally, the top three products in the pacifier market all have a long history. This shows that users have high requirements for the quality of pacifiers, and they are very sticky. Of course, this is also well understood. Parents will not easily change brands for the sake of their children's health. If Sunshine wants to enter this market, then the quality requirements must be given special attention. According to word frequency analysis, a good product should have such advantages: easy to use, cute in appearance, high quality, reasonable price, comfortable to use, easy to clean, and tasteless.
 	
 	Based on the calculation of the correlation coefficient, we find that 5-star reviews are more likely to incite more reviews. This also means that if a product has good feedback when it first enters the market, then other users are more likely to pay.
+	
+	\newpage
 	
 	\section{Letter}
 	\begin{flushleft}
