@@ -131,7 +131,7 @@
 	However, sales-based analysis is not enough. Below we will analyze the data from some other angles.
 	
 	\subsection{Word Frequency Statistics}
-	To analyze the review of consumers, we divided the review into high score (3-4 points) and a low score (1-2 points). First of all, we synthesize the reviews of the three products and find out the word frequency. Then we deal with the high-grade reviews and low-grade reviews of the three products respectively. The python code is attached. For the python code, see the appendix.
+	To analyze the review of consumers, we divided the review into high score (3-4 points) and a low score (1-2 points). First of all, we synthesize the reviews of the three products and find out the word frequency. Then we deal with the high-grade reviews and low-grade reviews of the three products respectively. The python code is attached. For the python code, see the Appendix A.
 	\subsubsection{Remove Stopwords}
 	Because some commonly used words are used quite frequently, such as a the, he, etc. in English, almost all comments contain these words. If they are used as keywords, almost all comments will be indexed, and there is no differentiation, so these words are generally removed directly, not as keywords.
 	
@@ -254,7 +254,7 @@
 	
 	\subsubsection{Data Processing}
 	
-	In order to calculate the correlation coefficient, we need to first calculate the covariance of these two data.Covariance can be easily calculated by the following equation:
+	In order to calculate the correlation coefficient, we need to first calculate the covariance of these two data. Covariance can be easily calculated by the following equation:
 	$$Cov(X,Y)=E[(X-E[X])(Y-E[Y])]$$
 	
 	Cov (X, Y) represents the covariance of X and Y, and E (X) represents the expectation of X.
@@ -358,7 +358,7 @@
 	
 	\subsubsection{Data Processing}
 	
-	The statistical granularity is one month. Calculate the average scoring of all reviews each month, and draw a score-time chart.
+	The statistical granularity is one month. Calculate the average scoring of all reviews each month, and draw a score-time chart.The calculations are done by Python. For the python code, see the Appendix B.
 	
 	First of all, let's see the chart of the top three hair dryers\ (product\_id: B003V264WW, B0009XH6TG, B00132ZG3U):
 	
@@ -489,10 +489,12 @@
 	\newpage
 	
 	\begin{appendices}
-		
+		\section{}
 		\textcolor[rgb]{0.98,0.00,0.00}{\textbf{Input python source:}}
 		\lstinputlisting[language=python]{./code/count_word_frequency.py}
-		
+		\section{}
+		\textcolor[rgb]{0.98,0.00,0.00}{\textbf{Input python source:}}
+		\lstinputlisting[language=python]{./code/average_rating.py}
 	\end{appendices}
 \end{document}
 
