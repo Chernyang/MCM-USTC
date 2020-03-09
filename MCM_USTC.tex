@@ -72,13 +72,13 @@
 	
 	\subsection{Background}
 	
-	In the online marketplace it created, Amazon provides customers with an opportunity to rate and review purchases.Other customers can submit ratings on these reviews as being helpful or not – called a “helpfulness rating”- towards assisting their own product purchasing decision. Companies use these data to gain insights into the markets in which they participate, the timing of that participation, and the potential success of product design feature choices.
+	In the online marketplace it created, Amazon provides customers with an opportunity to rate and review purchases. Other customers can submit ratings on these reviews as being helpful or not – called a “helpfulness rating”- towards assisting their own product purchasing decision. Companies use these data to gain insights into the markets in which they participate, the timing of that participation, and the potential success of product design feature choices.
 	
 	Sunshine Company is planning to introduce and sell three new products in the online marketplace: a microwave oven, a baby pacifier, and a hair dryer.
 	
 	\subsection{Problem Restatement}
 	
-	We are required to  identify key patterns, relationships, measures, and parameters in past customersupplied ratings and reviews associated with other competing products to:
+	We are required to  identify key patterns, relationships, measures, and parameters in past customer-supplied ratings and reviews associated with other competing products to:
 	\begin{itemize}
 		\item 
 		inform their online sales strategy
@@ -88,12 +88,12 @@
 	
 	\subsection{Solution Introduction}
 	
-	To meet the above requirements, we have done a variety of processing on the data. The main contents include the sales-time chart, word frequency statistics on features and quality descriptors, the relationship between specific star ratings and the number of reviews, and the combination of  text-based measures and ratings-based measures.
+	To meet the above requirements, we have done a variety of processing on the data. The main contents include the sales-time chart, word frequency statistics on features and quality descriptors, the relationship between specific star ratings and the number of reviews, and the combination of text-based measures and ratings-based measures.
 	
 	\section{Analysis and Results}
 	
 	\subsection{Sales-Based Analysis}
-	We screened sales data for three types of products, and selected the three products with the highest sales volume to draw sales-time line charts. The results are as follows.
+	We screened sales data for three types of products and selected the three products with the highest sales volume to draw sales-time line charts. The results are as follows.
 	
 	\begin{figure}[H]
 		\small
@@ -125,13 +125,14 @@
 		\item
 		The overall sales of the microwave oven market are low with relatively large fluctuations. Some products maintain low monthly sales and still have a downward trend. Some new products have good sales as soon as they hit the market. This may be because buyers of microwave ovens value new features of the products more.
 		\item
-		The sales of baby pacifiers are also generally increasing, but most of the best-selling products have a long sales history. This may be because for products such as baby pacifiers, people prefer products that are safe and reliable, and are more willing to choose a brand that sells well and is well received.
+		
+		The sales of baby pacifiers are also generally increasing, but most of the best-selling products have a long sales history. This may be because, for products such as baby pacifiers, people prefer products that are safe and reliable, and are more willing to choose a brand that sells well and is well received.
 	\end{itemize}
 	
 	However, sales-based analysis is not enough. Below we will analyze the data from some other angles.
 	
 	\subsection{Word Frequency Statistics}
-	To analyze the review of consumers, we divided the review into high score (3-4 points) and a low score (1-2 points). First of all, we synthesize the reviews of the three products and find out the word frequency. Then we deal with the high-grade reviews and low-grade reviews of the three products respectively. The python code is attached. For the python code, see the Appendix A.
+	To analyze the review of consumers, we divided the review into a high score (3-4 points) and a low score (1-2 points). First of all, we synthesize the reviews of the three products and find out the word frequency. Then we deal with the high-grade reviews and low-grade reviews of the three products respectively. The python code is attached. For the python code, see Appendix A.
 	\subsubsection{Remove Stopwords}
 	Because some commonly used words are used quite frequently, such as a the, he, etc. in English, almost all comments contain these words. If they are used as keywords, almost all comments will be indexed, and there is no differentiation, so these words are generally removed directly, not as keywords.
 	
@@ -144,13 +145,13 @@
 	\begin{figure}[H]
 		\begin{minipage}[t]{0.5\textwidth}
 			\centering
-			\includegraphics[scale=0.5]{pacifier_advantage.eps}
+			\includegraphics[width=9cm]{pacifier_advantage.eps}
 			\caption{The proportion of reasons people like the baby pacifier\label{fig:1}}
 		\end{minipage}
 		\qquad
 		\begin{minipage}[t]{0.5\textwidth}
 			\centering
-			\includegraphics[scale=0.5]{pacifier_disadvantage.eps}
+			\includegraphics[width=9cm]{pacifier_disadvantage.eps}
 			\caption{The proportion of reasons people dislike the baby pacifier\label{fig:2}}
 		\end{minipage}
 	\end{figure}
@@ -158,26 +159,25 @@
 	As shown in the chart, ease of use is the most outstanding advantage of the product. About 17\% of high scoring customers mentioned this feature in their comments. After that is cute, quality, price and pacifier design.
 	
 	
-	On the other hand, about 9.5\% of people who don't like the product complain
-	about the poor quality. Although 4\% of people who like the product think that the nipple fits well with there baby's mouth, 7\%  think that the nipple leaks, or is too short and hard. Besides, people can't bear the plastic smell, which is an important reason why they don't like it. Furthermore, some parents think that the baby pacifier doesn't fit well. At last, about 3\% of people find it hard to clean the pacifier, which makes them give low ratings.
+	On the other hand, about 9.5\% of people who don't like the product complain about the poor quality. Although 4\% of people who like the product think that the nipple fits well with there baby's mouth, 7\%  think that the nipple leaks, or is too short and hard. Besides, people can't bear the plastic smell, which is an important reason why they don't like it. Furthermore, some parents think that baby pacifier doesn't fit well. At last, about 3\% of people find it hard to clean the pacifier, which makes them give low ratings.
 	
 	
 	\subsubsection{Hair Dryer}
 	\begin{figure}[H]
 		\begin{minipage}[t]{0.5\textwidth}
 			\centering
-			\includegraphics[scale=0.5]{hair_dryer_advantage.eps}
+			\includegraphics[width=9cm]{hair_dryer_advantage.eps}
 			\caption{The proportion of reasons people like the hair dryer}
 		\end{minipage}
 		\qquad
 		\begin{minipage}[t]{0.5\textwidth}
 			\centering
-			\includegraphics[scale=0.5]{hair_dryer_disadvantage.eps}
+			\includegraphics[width=9cm]{hair_dryer_disadvantage.eps}
 			\caption{The proportion of reasons people dislike the hair dryer }
 		\end{minipage}
 	\end{figure}
 	
-	According to the figure,16\% of people think it saves their time, while 14\% were attracted by the affordable price.12\% think the retractable cord is a good design. Besides, the hairdryer is light to carry, so 10\% of customers give a high rating. At last, the heating setting design is also attractive.
+	According to the figure,16\% of people think it saves their time, while 14\% were attracted by the affordable price.12\% think the retractable cord is good design. Besides, the hairdryer is light to carry, so 10\% of customers give a high rating. At last, the heating setting design is also attractive.
 	
 	From the figure, we can know that about 21\% of people can't stand the extreme hot of the hair dryer.17\% complained that the cord broke quickly.10\% find that the setting mode has some problem.7\% think buying the hairdryer is a waste of money, and the same percentage of people wrote that the hairdryer broke quickly.
 	
@@ -185,19 +185,18 @@
 	\begin{figure}[H]
 		\begin{minipage}[t]{0.5\textwidth}
 			\centering
-			\includegraphics[scale=0.5]{microwave_advantage.eps}
+			\includegraphics[width=9cm]{microwave_advantage.eps}
 			\caption{The proportion of reasons people like the microwave oven\label{fig:1}}
 		\end{minipage}
 		\qquad
 		\begin{minipage}[t]{0.5\textwidth}
 			\centering
-			\includegraphics[scale=0.5]{microwave_disadvantage.eps}
+			\includegraphics[width=9cm]{microwave_disadvantage.eps}
 			\caption{The proportion of reasons people dislike the microwave oven\label{fig:2}}
 		\end{minipage}
 	\end{figure}
 	
-	About 35\% of customers love its size. They said they can put it anywhere in the kitchen and it fits well.21\% thinks it's easy to use.15\% people think that the price is fair.
-	6\% enjoy its paint. And some other people find the microwave oven easy to clean.
+	About 35\% of customers love its size. They said they can put it anywhere in the kitchen and it fits well.21\% thinks it's easy to use.15\% people think that the price is fair.	6\% enjoy its paint. And some other people find the microwave oven easy to clean.
 	
 	However, problems still exist. Customers complain that the customer service is horrible. Besides, the door of the microwave oven has many problems. Furthermore,20\% think warranty time is too short. About 9\% of people said that their microwave ovens stop working or the button broke;
 	
@@ -236,12 +235,12 @@
 	
 	
 	\begin{figure}[H]
-	\begin{minipage}[t]{1\textwidth}
-		\centering
-		\includegraphics[width=19cm]{total.eps}
-		\caption{probability the word appear in high/low rating comments\label{fig:1}}
-	\end{minipage}
-\end{figure}
+		\begin{minipage}[t]{1\textwidth}
+			\centering
+			\includegraphics[width=19cm]{total.eps}
+			\caption{probability the word appear in high/low rating comments\label{fig:1}}
+		\end{minipage}
+	\end{figure}
 	
 	As we can see, if the word 'love' or 'perfect' appears in the review, Users nearly have a 90\% chance to give high scores. On the contrary, if the word 'disappointed' is in the review, We can almost conclude that the user will give a low rating.
 	
@@ -254,7 +253,7 @@
 	
 	\subsubsection{Data Processing}
 	
-	In order to calculate the correlation coefficient, we need to first calculate the covariance of these two data. Covariance can be easily calculated by the following equation:
+	To calculate the correlation coefficient, we need to first calculate the covariance of these two data. Covariance can be easily calculated by the following equation:
 	$$Cov(X,Y)=E[(X-E[X])(Y-E[Y])]$$
 	
 	Cov (X, Y) represents the covariance of X and Y, and E (X) represents the expectation of X.
@@ -309,26 +308,26 @@
 		\item Meaningless text: Besides, the rest of the text, such as advertising content, copyright information, and personal signature, should also be filtered out, which should not be learned as features.
 	\end{itemize}
 	\subsubsection{Algorithm}
-	In the algorithm,Dynamic Convolution Neural Network is used as the sentiment prediction algorithm.The network layers are set as follows:
+	In the algorithm, Dynamic Convolution Neural Network is used as the sentiment prediction algorithm. The network layers are set as follows:
 	\begin{itemize}
 		\item Embedding layer: set as the lowest layer, to get the vector representation for individual words to form the matrix representation of the sentence
 		\item Convolutional Layer: extracts local features by performing 2d convolution on the sentence matrix
 		\item K-max pooling layer: extracts kth strongest signals on a per-feature basis
 		\item Folding layer: adds interaction among features by "folding" the input matrix
-		\item Logistic regression layer: the final layer that makes the prediction by assigning scores to each output label
+		\item Logistic regression layer: the final layer that predicts by assigning scores to each output label
 	\end{itemize}
 	
 	
 	\subsection{Verifying the Accuracy of Review-Based Ratings}
-	In the previous subsection, we analyzed reviews using natural language processing and gave a score for each record. This subsection we will verify the accuracy of the previously given score.
+	In the previous subsection, we analyzed reviews using natural language processing and gave a score for each record. This subsection will verify the accuracy of the previously given score.
 	
-	We believe that the correlation coefficient between review-based ratings and star ratings can well reflect the accuracy of the reviews analysis. We calculated the total correlation coefficients of the three categories of products, and the correlation coefficients of high star rating (4-5) and low star rating (1-2). The results are as follows:
+	We believe that the correlation coefficient between review-based ratings and star ratings can well reflect the accuracy of the analysis of the review. We calculated the total correlation coefficients of the three categories of products, and the correlation coefficients of high star rating (4-5) and low star rating (1-2). The results are as follows:
 	
 	
 	
 	\begin{table}[h]
 		\begin{center} 
-			\caption{correlation coefficient between review-based ratings and star ratings}
+			\caption{the correlation coefficient between review-based ratings and star ratings}
 			\begin{tabular}{|c|c|c|}
 				\hline
 				&                  & correlation coefficient \\ \hline
@@ -359,7 +358,7 @@
 	On top, star\_rating is between 1 and 5, text\_rating is between 0 and 1.
 	\subsubsection{Data Processing}
 	
-	The statistical granularity is one month. Calculate the average scoring of all reviews each month, and draw a score-time chart.The calculations are done by Python. For the python code, see the Appendix B.
+	The statistical granularity is one month. Calculate the average scoring of all reviews each month, and draw a score-time chart. The calculations are done by Python. For the python code, see Appendix B.
 	
 	First of all, let's see the chart of the top three hair dryers\ (product\_id: B003V264WW, B0009XH6TG, B00132ZG3U):
 	
@@ -372,7 +371,7 @@
 	
 	Combining the above figure, we find that the average score curves of these three products are very similar. In the early stages, product ratings fluctuated greatly because there were fewer customers. For example, the product B0009XH6TG (red line) has fluctuated between 1 and 5 stars in the early stage, the product B003V264WW (blue line) has fluctuated between 3 stars and 5 stars in the early stage, and the product B00132ZG3U (green line) has also fluctuated between 3 stars and 5 stars. In the later period, the scores of the three products stabilized at about 4 points, and the fluctuations did not exceed 0.5 points. It can be seen that the ratings of these three products in the later period are similar.
 	
-	Secondly, here is the chart of the top three microwave ovens\    (product\_id:B0055UBB40, B0058CLNBU,B0052G14E8):
+	Secondly, here is the chart of the top three microwave ovens\    (product\_id: B0055UBB40, B0058CLNBU, B0052G14E8):
 	
 	\begin{figure}[H]
 		\small
@@ -381,9 +380,9 @@
 		\caption{microwave oven average rating} \label{fig:micorwave average rating}
 	\end{figure}
 	
-	This picture is not different from the above picture, because the microwave oven has fewer reviews, the average rating fluctuates greatly. First of all, the product B0055UBB40 (red line) has been fluctuating between one star and three stars. Secondly, the product B0058CLNBU (blue line) has been fluctuating between one star and five stars, and the blue line has been almost above the red line. The final product B0052G14E8 (green line) fluctuated between one star and five stars in the early stage, and stabilized at about four stars in the later stage. It can be seen that the market feedback of product B0058CLNBU (blue line) and product B0052G14E8 (green line) is better than product B0055UBB40 (red line).
+	    This picture is not different from the above picture, because the microwave oven has fewer reviews, the average rating fluctuates greatly. First of all, the product B0055UBB40 (red line) has been fluctuating between one star and three stars. Secondly, the product B0058CLNBU (blue line) has been fluctuating between one star and five stars, and the blue line has been almost above the red line. The final product B0052G14E8 (green line) fluctuated between one star and five stars in the early stage and stabilized at about four stars in the later stage. It can be seen that the market feedback of product B0058CLNBU (blue line) and product B0052G14E8 (green line) is better than product B0055UBB40 (red line).
 	
-	Finally, the chart of the top three baby pacifiers is as follow:\ (product\_id:B003CK3LLDI, B0028IDXDS, B0045I6IA4):
+	Finally, the chart of the top three baby pacifiers is as follow:\ (product\_id: B003CK3LLDI, B0028IDXDS, B0045I6IA4):
 	\begin{figure}[H]
 		\small
 		\centering
@@ -394,7 +393,7 @@
 	
 	\subsection{Comprehensive Evaluation}
 	\subsubsection{Theory}
-	In the previous subsection, we gave a measurement scheme based on user star rating and review analysis only, which focuses more on user evaluation. But sometimes sales, helpful votes and whether a buyer is a vine can also affect the measurement of a product. Therefore, we designed another general evaluation formula:
+	In the previous subsection, we gave a measurement scheme based on the user star rating and review analysis only, which focuses more on user evaluation. But sometimes sales, helpful votes and whether a buyer is a vine can also affect the measurement of a product. Therefore, we designed another general evaluation formula:
 	
 	$$review\_score=(text\_rating\times4-2)\times(10+helpful\_votes-(total\_votes-helpful\_votes))$$
 	
@@ -458,24 +457,24 @@
 		Dear Director:
 	\end{flushleft}
 	\paragraph{}
-	I write to you on behalf of the MCM team 2010225.As soon as we know that you are going to launch and sell the products, we have analyzed the historical sales data of these three types of products. I hope it can help you to develop your sales strategy.
+	I write to you on behalf of the MCM team 2010225. As soon as we know that you are going to launch and sell the products, we have analyzed the historical sales data of these three types of products. I hope it can help you to develop your sales strategy.
 	
-	First of all, we analyzed the sales volume of the three products. 
-	In general, hair dryers and baby pacifiers sell more than microwave ovens.The details of the three products are as follows:
+	    First of all, we analyzed the sales volume of the three products. 
+	In general, hair dryers and baby pacifiers sell more than microwave ovens. The details of the three products are as follows:
 	
-	For hair dryer, some new products have a rapid growth in sales in a short period of time, surpassing many old products with slow growth in sales. In addition, the total sales volume of hair dryer has increased rapidly in recent years. So if your product quality is excellent, you will have great development opportunities. 
+	For hair dryer, some new products have a rapid growth in sales in a short period, surpassing many old products with slow growth in sales. Besides, the total sales volume of the hair dryer has increased rapidly in recent years. So if your product quality is excellent, you will have great development opportunities. 
 	
 	The sales volume of microwave ovens fluctuates greatly. Some products are not selling well all the time, but many new products sell well as soon as they come into the market. This may be because consumers of microwave ovens prefer the new features of the product.
 	
-	The overall increase in sales of baby pacifiers may be related to the increase in the number of newborns, which is good for you. But the best selling goods have a long sale time. This may be due to the fact that people prefer to choose safe and reliable old brands with large sales volume and high praise. So you should pay more attention to quality and make good reputation.
+	The overall increase in sales of baby pacifiers may be related to the increase in the number of newborns, which is good for you. But the best selling goods have a long sale time. This may be because people prefer to choose safe and reliable old brands with large sales volume and high praise. So you should pay more attention to quality and make good reputation.
 	
 	Then we have statistical research on customer reviews. Through the research of some words that often appear in the reviews, we have summed up the five most praised and questioned features of the three types of products, hoping to help you to summarize the experience and lessons.
 	
-	For baby pacifier, safety and quality are the main concerns of customers. It's worth mentioning that many customers complain that many products in the past have a plastic smell. If you make an improvement, it will certainly help you win more customers. For hair dryer, people pay more attention to the comfort and price of use, and we can consider developing affordable and convenient products. For the microwave oven, people are very concerned about their size and after-sales service. Because the microwave oven is a long-term product, so you really need to pay attention to after-sales service. If you can, extending the warranty will also win you more customers.
+	For baby pacifier, safety and quality are the main concerns of customers. It's worth mentioning that many customers complain that many products in the past have a plastic smell. If you make an improvement, it will certainly help you win more customers. For hair dryer, people pay more attention to the comfort and price of use, and we can consider developing affordable and convenient products. For the microwave oven, people are very concerned about their size and after-sales service. Because the microwave oven is a long-term product, so you need to pay attention to after-sales service. If you can, extending the warranty will also win you more customers.
 	\paragraph{}
 	Finally, we set a comprehensive value for you to evaluate your sales situation in the future, which integrates the customer's comments, scores, vote on the comments, whether the customer is vine and other factors. You can use it to make a comprehensive assessment of your sales situation and compare it with previous products to help you sell products better.
 	
-	hope our advice will help you.
+	Hope our advice will help you.
 	\flushleft
 	Sincerely yours
 	\flushleft
