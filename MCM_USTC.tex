@@ -382,6 +382,46 @@
 	This picture is very similar to the picture about the hair dryer, both of which fluctuate in the early stage and stabilize in the later stage. In the later period, the three products were stable between four stars and 4.5 stars. In this regard, market feedback is better than hair dryers.
 	
 	
+	\subsubsection{Another Theory}
+	In the previous subsubsection, we gave a measurement scheme based on user star rating and review analysis only, which focuses more on user evaluation. But sometimes sales, helpful votes and whether a buyer is a vine can also affect the measurement of a product. Therefore, we designed another general evaluation formula:
+	
+	$$review\_score=(text\_rating\times4-2)\times(10+helpful\_votes-(total\_votes-helpful\_votes))$$
+	
+	$$rating\_score=star\_rating\times10\times(1+isvine)$$
+	
+	$$total\_score=max(0,\frac{review\_score+rating\_score\times4}{100})$$
+	
+	\subsubsection{Data Processing}
+	We sum the total score of all the reviews every month and select the top three products to draw a line chart. The results are as follows:
+	
+	\begin{figure}[H]
+		\small
+		\centering
+		\includegraphics[width=15cm]{hair_dryer_total_score.eps}
+		\caption{hair dryer total score} \label{fig:hair dryer total score}
+	\end{figure}
+	
+	Combined with the previous chart, we can see that for the hair dryer, the three products have the same rating, and there are some differences in sales. This is also reflected in the total score: the overall rating of the product B003V264WW (black line) is slightly better than the other two products. But in general, all three products are very competitive. If you want to take the lead in this product category, you must have a unique advantage.
+	
+	\begin{figure}[H]
+		\small
+		\centering
+		\includegraphics[width=15cm]{microwave_total_score.eps}
+		\caption{microwave total score} \label{fig:microwave total score}
+	\end{figure}
+	
+	For microwave ovens, the difference is obvious. Product B0052G14E8 (black line) has always maintained a good score; product B0058CLNBU (blue line) has always had a low score; product B0055UBB4O (red line) has increased rapidly after a period of low scores. This may be because product B0055UBB4O (the red line) made up for the shortcomings in the sales process, resulting in a large increase in sales. It can be seen that if some fatal flaws are avoided, the company can easily occupy a good microwave oven market share.
+	
+	\begin{figure}[H]
+		\small
+		\centering
+		\includegraphics[width=15cm]{pacifier_total_score.eps}
+		\caption{pacifier total score} \label{fig:pacifier total score}
+	\end{figure}
+	
+	The market competition for baby pacifiers is also fierce, with three products taking the lead alternately. However, we have noticed that the total scores of these products have been declining recently. So if you want to join the market for baby pacifiers, it's important to seize this opportunity.
+	
+	In general, we believe that the formula for calculating a total score can reflect the sales of goods very well. By comparing the total scores with other similar products or with the total score of a certain period before, the company can clearly understand the sales situation and adjust the sales strategy.
 	
 	
 	\section{Conclusion}
