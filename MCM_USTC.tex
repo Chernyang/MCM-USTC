@@ -250,6 +250,14 @@
 	
 	\subsubsection{Data Processing}
 	
+	In order to calculate the correlation coefficient, we need to first calculate the covariance of these two data.Covariance can be easily calculated by the following equation:
+	$$Cov(X,Y)=E[(X-E[X])(Y-E[Y])]$$
+	Cov (X, Y) represents the covariance of X and Y, and E (X) represents the expectation of X.
+	
+	After getting the covariance, we used the following formula to calculate the correlation coefficient:
+	$$r(X,Y)=\frac{Cov(X,Y)}{\sqrt{Var[X]Var[Y]}}$$
+	Here r (X, Y) represents the correlation coefficient between X and Y, and Var [X] represents the variance of X.
+	
 	Here is the table of the correlation coefficient for every star rating:
 	
 	% Please add the following required packages to your document preamble:
@@ -308,15 +316,7 @@
 	\subsection{Verifying the Accuracy of Review-Based Ratings}
 	In the previous subsection, we analyzed reviews using natural language processing and gave a score for each record. This subsection we will verify the accuracy of the previously given score.
 	
-	We believe that the correlation coefficient between review-based ratings and star ratings can well reflect the accuracy of the reviews analysis. In order to calculate the correlation coefficient, we need to first calculate the covariance of these two data.Covariance can be easily calculated by the following equation:
-	$$Cov(X,Y)=E[(X-E[X])(Y-E[Y])]$$
-	Cov (X, Y) represents the covariance of X and Y, and E (X) represents the expectation of X.
-	
-	After getting the covariance, we used the following formula to calculate the correlation coefficient:
-	$$r(X,Y)=\frac{Cov(X,Y)}{\sqrt{Var[X]Var[Y]}}$$
-	Here r (X, Y) represents the correlation coefficient between X and Y, and Var [X] represents the variance of X.
-	
-	We calculated the total correlation coefficients of the three categories of products, and the correlation coefficients of high star rating (4-5) and low star rating (1-2). The results are as follows:
+	We believe that the correlation coefficient between review-based ratings and star ratings can well reflect the accuracy of the reviews analysis. We calculated the total correlation coefficients of the three categories of products, and the correlation coefficients of high star rating (4-5) and low star rating (1-2). The results are as follows:
 	
 	
 	
@@ -430,7 +430,17 @@
 	
 	\section{Conclusion}
 	
-	在这篇论文中，我们使用了多种处理方式，主要分析了目前市场上已有产品的销量及用户反馈。
+	In this paper, we used NLP, correlation coefficients, and word frequency statistics to analyze the sales of existing products on the market and user feedback.
+	
+	The analysis of the following three products is based on the three evaluation indicators above: sales volume, average score, and total score. The average rating combines text-based ratings and star ratings, reflecting user feedback. The total score combines multiple indicators, which are proportional to the market sales, text-based ratings, star ratings, and the number of useful votes, so it can accurately reflect the market response of the product.
+	
+	The competition in the hair dryer market is very fierce, and the top three products with similar sales ratios and ratings are similar. Among them, the product B003V264WW has the shortest history, but the average score has remained at a high level, and the market share and total score have advanced rapidly. This shows that this product has its unique advantages and has more references for Sunshine Company. According to word frequency surveys of high-scoring reviews, these words often appear: save time, save money, heat controllability, and lightness. These advantages should be valued by Sunshine. But at the same time avoid the disadvantages of easy damage.
+	
+	The competition in the microwave oven market is not so fierce. Recently, two products (B0052G14E8 and B0055UBB40) accounted for a large proportion, and the product B0052G14E8 has only entered the market for two years. This shows that the microwave oven market has great potential. Sunshine can invest more. But the product B0052G14E8's average score and total score are both relatively high, which indicates that if Sunshine's newly launched products have unique competitiveness, it may occupy a large market in a short period. According to word frequency analysis, the following advantages should be valued: proper size, ease of use, cheap price, good paint, easy cleaning, and robustness.
+	
+	Finally, the top three products in the pacifier market all have a long history. This shows that users have high requirements for the quality of pacifiers, and they are very sticky. Of course, this is also well understood. Parents will not easily change brands for the sake of their children's health. If Sunshine wants to enter this market, then the quality requirements must be given special attention. According to word frequency analysis, a good product should have such advantages: easy to use, cute in appearance, high quality, reasonable price, comfortable to use, easy to clean, and tasteless.
+	
+	Based on the calculation of the correlation coefficient, we find that 5-star reviews are more likely to incite more reviews. This also means that if a product has good feedback when it first enters the market, then other users are more likely to pay.
 	
 	\section{Letter}
 	

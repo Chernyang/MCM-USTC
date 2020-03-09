@@ -1,0 +1,29 @@
+\contentsline {section}{\numberline {1}Overview}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Background}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Problem Restatement}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Solution Introduction}{3}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Data Processing and Conclusion Analysing}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Sales-Based Analysis}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Count the Word Frequency Statistics}{6}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Remove Stopwords}{6}{subsubsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.3}Advantages and Disadvantages of Three Products}{6}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Pacifier}{6}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Hair Dryer}{7}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Microwave}{7}{subsubsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.4}Relations between Specific Quality Descriptors and Rating Levels}{8}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Do specific star ratings incite more reviews? }{9}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Theory}{9}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}Data Processing}{9}{subsubsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.5.3}Conclusion}{10}{subsubsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.6}Using DNN to Calculate the Value of the Reviews}{10}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}Preprocessing}{10}{subsubsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.2}Algorithm}{11}{subsubsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.7}Verifying the Accuracy of Review-Based Ratings}{11}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}User Evaluation}{12}{subsection.2.8}%
+\contentsline {subsubsection}{\numberline {2.8.1}Theory}{12}{subsubsection.2.8.1}%
+\contentsline {subsubsection}{\numberline {2.8.2}Data Processing}{12}{subsubsection.2.8.2}%
+\contentsline {subsubsection}{\numberline {2.8.3}Another Theory}{14}{subsubsection.2.8.3}%
+\contentsline {subsubsection}{\numberline {2.8.4}Data Processing}{15}{subsubsection.2.8.4}%
+\contentsline {section}{\numberline {3}Conclusion}{17}{section.3}%
+\contentsline {section}{\numberline {4}Letter}{18}{section.4}%
+\contentsline {section}{Appendices}{20}{section*.19}%
