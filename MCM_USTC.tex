@@ -356,6 +356,7 @@
 	average\ rating = 0.8 \times star\_rating + text\_rating
 	$$
 	
+	On top, star\_rating is between 1 and 5, text\_rating is between 0 and 1.
 	\subsubsection{Data Processing}
 	
 	The statistical granularity is one month. Calculate the average scoring of all reviews each month, and draw a score-time chart.The calculations are done by Python. For the python code, see the Appendix B.
@@ -400,6 +401,8 @@
 	$$rating\_score=star\_rating\times10\times(1+isvine)$$
 	
 	$$total\_score=max(0,\frac{review\_score+rating\_score\times4}{100})$$
+	
+	On top, star\_rating is between 1 and 5, text\_rating is between 0 and 1.
 	
 	\subsubsection{Data Processing}
 	We sum the total score of all the reviews every month and select the top three products to draw a line chart. The results are as follows:
